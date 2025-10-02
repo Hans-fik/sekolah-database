@@ -42,3 +42,27 @@ INSERT INTO public.nilai (mata_pelajaran,nilai) VALUES
 	 ('Bahasa',86),
 	 ('Matematika',100),
 	 ('Fisika',100);
+
+
+-- Menampilkan semua siswa
+INSERT INTO siswa (nama) VALUES
+	 ('Aldi'),
+	 ('Naufal'),
+	 ('Sahsa'),
+	 ('Chesa'),
+	 ('Evan');
+
+-- Menampikan siswa dengan jurusan IPA
+INSERT INTO siswa (nama) VALUES
+	 ('Aldi'),
+	 ('Chesa'),
+	 ('Evan');
+
+-- Menampilkan rata-rata nilai siswa
+INSERT INTO "select siswa.nama, AVG(nilai.nilai) as rata_nilai from siswa 
+join nilai on siswa.id=nilai.siswa_id group by siswa.nama" (nama,rata_nilai) VALUES
+	 ('Evan',100.0000000000000000),
+	 ('Aldi',85.0000000000000000),
+	 ('Chesa',100.0000000000000000),
+	 ('Sahsa',86.0000000000000000),
+	 ('Naufal',90.0000000000000000);
