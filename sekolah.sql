@@ -24,3 +24,21 @@ CREATE TABLE public.nilai (
 -- public.nilai foreign keys
 ALTER TABLE public.nilai 
 ADD CONSTRAINT nilai_siswa_id_fkey FOREIGN KEY (siswa_id) REFERENCES public.siswa(id);
+
+
+-- Memasukan data siswa
+INSERT INTO public.siswa (nama,umur,jurusan) VALUES
+	 ('Aldi',17,'IPA'),
+	 ('Naufal',17,'IPS'),
+	 ('Sahsa',16,'IPS'),
+	 ('Chesa',17,'IPA'),
+	 ('Evan',16,'IPA');
+
+
+-- Memasukan data nilai
+INSERT INTO public.nilai (mata_pelajaran,nilai) VALUES
+	 ('Biologi',85),
+	 ('Sejarah',90),
+	 ('Bahasa',86),
+	 ('Matematika',100),
+	 ('Fisika',100);
