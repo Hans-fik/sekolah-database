@@ -26,18 +26,17 @@ ALTER TABLE public.nilai
 ADD CONSTRAINT nilai_siswa_id_fkey FOREIGN KEY (siswa_id) REFERENCES public.siswa(id);
 
 
--- Memasukan data siswa
+-- Memasukan data siswa + ubah jurusan
 INSERT INTO public.siswa (nama,umur,jurusan) VALUES
-	 ('Aldi',17,'IPA'),
 	 ('Naufal',17,'IPS'),
 	 ('Sahsa',16,'IPS'),
 	 ('Chesa',17,'IPA'),
-	 ('Evan',16,'IPA');
+	 ('Evan',16,'IPA'),
+	 ('Aldi',17,'IPS'); --IPA to IPS
 
 
--- Memasukan data nilai
+-- Memasukan data nilai + hapus Biologi
 INSERT INTO public.nilai (mata_pelajaran,nilai) VALUES
-	 ('Biologi',85),
 	 ('Sejarah',90),
 	 ('Bahasa',86),
 	 ('Matematika',100),
